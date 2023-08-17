@@ -1,0 +1,239 @@
+/********* Custom Header/Footer Styles ********/
+#header {
+    background-color: transparent !important;
+}
+
+.floating-footer {
+    background-color: white;
+}
+/***************************************/
+
+#main-content, #main-content .row {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+/********* Left-Side Styles ********/
+#left-side {
+    position: relative;
+    padding: 0;
+    min-width: 70vw;
+    height: 100vh;
+    overflow: hidden;
+
+   /*  border: 1px solid blue; */
+}
+
+#music-player {
+    position: relative;
+    margin-left: 10vw;
+    height: 100vh;
+    width: 60vw;
+    /* border: 1px solid red; */
+}
+
+#music-image {
+    position: absolute;
+    object-fit: cover;
+    max-width: 60vw;
+    min-height: 100vh;
+    z-index: 1;
+    opacity: 100%;
+}
+
+#play-button, #backward, #forward {
+    opacity: 70%;
+}
+
+#play-button:hover, #backward:hover, #forward:hover {
+    opacity: 90%;
+}
+
+#play-div {
+    position: absolute;
+    top: 39%;
+    height: 4.5rem;
+    width: 100%;
+    z-index: 15;
+}
+
+#play-button {
+    position: relative;
+    display: flex;
+    margin: auto;
+    width: 4.5rem;
+    height: 100%;
+    justify-content: center;
+}
+
+#backward {
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    width: 3.5rem;
+    height: 3.5rem;
+    z-index: 17;
+}
+
+#forward {
+    position: absolute;
+    top: 40%;
+    right: 2%;
+    width: 3.5rem;
+    height: 3.5rem;
+    z-index: 18;
+}
+
+#song-title {
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    opacity: 80%;
+    color: black;
+    z-index: 12;
+}
+/***********************************/
+
+
+/********** Right-Side Styles *********/
+#right-side {
+    margin-top: 10rem;
+    padding: 0;
+    width: 30%;
+    text-align: right;
+}
+
+#music-text {
+    margin-right: 1.5vw;
+}
+
+#right-side a {
+    display: inline-block;
+    margin-top: 0.7rem;
+    font-weight: 600;
+}
+
+#right-side p {
+    margin-bottom: 2.5rem;
+}
+/**************************************/
+@media (max-width: 1150px) {
+    #header {
+        background-color: white !important;
+    }
+
+    #left-side{
+        width: 60vw;
+    }
+
+    #right-side {
+        display: flex;
+        align-items: center;
+        margin-top: -10vh;
+        width: 40vw;
+    }
+
+    #music-player {
+        margin-right: 0;
+    }
+
+    #play-div {
+        top: 40%;
+        height: 3.5rem;
+    }
+
+    #play-button {
+        width: 3.5rem;
+        height: 100%;
+    }
+
+    #music-player {
+        margin-left: 0;
+    }
+
+    #song-title {
+        font-size: 3vh;
+    }
+
+    #backward, #forward {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    #music-text h1 {
+        font-size: 4.5vh;
+    }
+
+    #music-text p, #music-text a {
+        font-size: 0.9rem;
+    }
+
+    #music-text p {
+        font-size: 1.5vh;
+        margin-bottom: 0.5rem;
+    }
+
+    #music-text a {
+        font-size: 1.5vh;
+    }
+}
+
+/********* Styles: Phone *********/
+@media (max-width: 624px) {
+    #left-side, #right-side {
+        min-width: 100vw;
+    }
+
+    #left-side {
+        height: 70vh;
+    }
+
+    #music-player {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #music-image {
+        min-width: 100%;
+
+    }
+
+    #play-div {
+        top: 45%;
+    }
+
+    #play-button {
+        min-height: 2.4rem;
+        max-height: 8vw;
+        min-width: 2.4rem;
+        max-width: 8vw;
+    }
+
+    #song-title {
+        font-size: 1.2rem;
+    }
+
+    #backward, #forward {
+        top: 46%;
+        min-height: 2.2rem;
+        max-height: 7.5vw;
+        min-width: 2.2rem;
+        max-width: 7.5vw;
+    }
+
+    #right-side {
+        margin-top: 4vh;
+        margin-bottom: 15vh;
+        padding-left: 10vw;
+        text-align: left;
+    }
+
+    #music-text h1 {
+        margin-bottom: 0;
+    }
+}

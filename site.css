@@ -1,0 +1,376 @@
+/********** Site-Wide Styles **********/
+
+html {
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+body {
+    width: 100vw;
+    background-color: white;
+}
+
+* {
+    font-family: 'Roboto', monospace;
+    color: #24130F;
+}
+
+h1, h2 {
+    font-family: 'Lusitana', serif;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: #24130F;
+}
+
+.hover-underline {
+    position: relative;
+}
+
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ECA900;
+    transform-origin: bottom-right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+/********* Header Styles **********/
+#header {
+    position: fixed;
+    margin: 0;
+    padding: 0; 
+    width: 100vw;
+    height: 6.5vh;
+    z-index: 30;
+    background-color: white;
+}
+
+.main-float p:hover, .main-float img:hover, .nav-link:hover {
+    color: #837979;
+}
+
+.back-to-main {
+    float: left;
+    margin: 0;
+    margin-left: 1rem;
+    padding: 0;
+    height: 100%;
+    min-width: 20vw;
+}
+
+.main-float {
+    float: left;
+    margin-left: 0;
+    padding-top: 1.2vh;
+    padding-left: 0.4rem;
+    font-weight: 600;
+}
+
+.main-float img {
+    display: inline-block;
+    margin-top: -0.25rem;
+    width: 0.5rem;
+    height: 0.8rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main-float p {
+    display: inline-block;
+    margin-left: 0.5rem;
+    width: 20vw;
+    font-size: 1.1rem;
+}
+
+.nav-link {
+    float: right;
+    margin: 0;
+    font-family: 'Palanquin', sans-serif;
+    font-size: 1.1rem;
+    height: 2rem;
+    vertical-align: middle;
+    color: #24130F;
+}
+
+#link-wrapper {
+    display: none;
+    background-color: white;
+}
+
+.current {
+    font-weight: 600;
+}
+
+#ac {
+    margin-left: 1rem;
+    margin-right: 1.1rem;
+}
+
+/********* Footer Styles *********/
+.floating-footer {
+    position: fixed;
+    margin: 0;
+    left: 0;
+    bottom: 0%;
+    height: 4rem;
+    width: 100vw;
+    z-index: 14;
+}
+
+.footer {
+    position: relative;
+    margin-top: 0.8rem;
+    padding-bottom: 0.5rem;
+    z-index: 15;
+    width: 12rem;
+}
+
+.icon-list {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 5rem;
+} 
+
+.icon-list .col {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.icons {
+    display: inline-block;
+    margin: 0;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.portfolio-attributions {
+    display: block;
+    margin: auto;
+    width: 11rem;
+    justify-content: center;
+
+    /* border: 1px solid blue; */
+}
+
+.portfolio {
+    display: inline-block;
+    margin: 0;
+    font-size: 0.8rem;
+    font-family: 'Lusitana', serif;
+}
+
+/* Icon with attribution links */
+.info-icon, .info-icon:focus {
+    border: none;
+    background-color: white;
+}
+
+.info-icon {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: top;
+}
+
+.info-icon img {
+    object-fit: contain;
+    height: 0.8rem;
+    vertical-align: text-top;
+}
+
+/* Info tooltip styles */
+h3, .tooltip-link {
+    display: block;
+    margin: 0;
+    font-family: 'Roboto', monospace;
+    font-size: 0.8rem;
+    color: white;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+.tooltip-link {
+    margin-bottom: 0.5rem;
+}
+
+.tooltip-link:hover, .attr-link:hover {
+    color: #ECA900;
+}
+
+.attr-link, .attr-text {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', monospace;
+    font-size: 0.8rem;
+}
+
+/********* Styles: Tablet/Phone **********/
+@media (max-width: 1150px) {
+    #header nav {
+        display: none;
+    }
+
+    .main-float {
+        justify-content: left;
+    }
+
+    .main-float img {
+        margin-top: 0.2vh;
+        height: 1.6rem;
+        width: 1.1rem;
+    }
+
+    .main-float p {
+        display: none;
+    }
+
+    #link-wrapper {
+        display: block;
+        float: right;
+        padding-top: 1.5vh;
+    }
+
+    #link-wrapper img {
+        float: right;
+        padding-right: 5vw;
+    }
+
+    #mobile-links {
+        display: none;
+        margin-top: 2vh;
+        min-width: 13rem;
+        max-width: 45vw;
+    }
+
+    #mobile-links hr {
+        margin-top: 2rem;
+        width: 80%;
+        background-color: lightgray;
+    }
+
+    #mobile-links a {
+        clear: right;
+        display: block;
+        padding: 0;
+        margin-right: 5vw;
+        text-align: right;
+    }
+
+    .ac {
+        margin-top: 1vh;
+        margin-right: 0;
+        margin-bottom: 1vh;
+    }
+
+    .floating-footer {
+        height: 4rem;
+
+        background-color: white;
+    }
+
+    .footer {
+        display: flex;
+        padding: 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .icon-list {
+        display: inline-block;
+        margin: 0;
+        min-width: 10rem;
+    }
+
+    .icons {
+        margin-right: 0.5rem;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .portfolio-attributions {
+        display: inline-block;
+        margin: 0;
+        height: 100%;
+        min-width: 20rem;
+    }
+
+    .portfolio {
+        font-size: 1.5rem;
+    }
+
+    .info-icon, .info-icon img {
+        margin-left: 0.2rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+  
+}
+
+/********** Styles: Phone ********/
+@media (max-width: 624px) {
+    .floating-footer {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 12vh;
+
+    }
+    .footer {
+        display: block;
+        margin: auto;
+        padding: 0;
+    }
+
+    .icon-list {
+        display: flex;
+        margin: auto;
+        margin-top: 1vh;
+        justify-content: center;
+    }
+
+    .icons {
+        margin: 2vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 5vh;
+        width: 5vh;
+    }
+
+    .portfolio-attributions {
+        display: flex;
+        margin-left: -4rem;
+        justify-content: center;
+    }
+
+    .portfolio {
+        font-size: 1.3rem;
+    }
+
+    .info-icon, .info-icon img {
+        margin-left: 0.2rem;
+        width: 3vh;
+        height: 3vh;
+    }
+}
